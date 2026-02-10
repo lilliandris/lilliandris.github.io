@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>ITW rozcestník</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #020617;
+            --card: #020617;
+            --border: #1e293b;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(1200px 600px at 10% 10%, #020617, var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: 0.04em;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            color: var(--muted);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: linear-gradient(180deg, #020617, #020617);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,.4);
+        }
+
+        .project h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .project p {
+            margin: 0 0 1rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .project .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .project a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ITW rozcestník</h1>
+    <p>Prehľad projektov a cvičení</p>
+</header>
+
+<main>
+
+    <!-- PROJECT TEMPLATE – copy this whole div -->
+    <div class="project">
+        <h2>Názov projektu</h2>
+        <p>Krátky popis projektu. Čo to je, čo to robí, prípadne technológie.</p>
+        <div class="meta">
+            <span>2026-02-10</span>
+            <a href="project1/index.html">Otvoriť →</a>
+        </div>
+    </div>
+    <!-- END PROJECT -->
+
+    <div class="project">
+        <h2>Ďalší projekt</h2>
+        <p>Tu si len zmeníš text, dátum a link na iný priečinok alebo súbor.</p>
+        <div class="meta">
+            <span>2026-02-12</span>
+            <a href="project2/">Otvoriť →</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    xbukovp00
+</footer>
+
+</body>
+</html>
